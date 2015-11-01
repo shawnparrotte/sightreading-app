@@ -1,6 +1,23 @@
 
-var blank = "<img src='img/note_0.jpg'>";
+$.preload( 'img/note_0.jpg',
+           'img/note_C0.jpg',
+           'img/note_D0.jpg',
+           'img/note_E0.jpg',
+           'img/note_F0.jpg',
+           'img/note_G0.jpg',
+           'img/note_A.jpg',
+           'img/note_B.jpg',
+           'img/note_C.jpg',
+           'img/note_D.jpg',
+           'img/note_E.jpg',
+           'img/note_F.jpg',
+           'img/note_G.jpg',
+           'img/note_A2.jpg',
+           'img/note_B2.jpg',
+           'img/note_C2.jpg'
+      );
 
+var blank = "<img src='img/note_0.jpg'>";
 var realC0 = "<img src='img/note_C0.jpg'>";
 var realD0 = "<img src='img/note_D0.jpg'>";
 var realE0 = "<img src='img/note_E0.jpg'>";
