@@ -1,0 +1,116 @@
+
+.arrows {
+  margin-top: 20px;
+}
+
+.arrows i {
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+
+.counter {
+  border: 2px solid black;
+}
+
+.counter h3 {
+  margin-top: 46px;
+}
+
+.easy:hover{
+  background-color: lightgreen;
+  color: white;
+}
+
+h1 {
+  font-family: Arial;
+}
+
+h2 {
+  text-align: center;
+  font-family: Arial;
+}
+
+h3 {
+  font-size: 25px;
+  text-align: center;
+  font-family: Arial;
+}
+
+.hard:hover{
+  background-color: red;
+  color: white;
+}
+
+.headline {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+.level {
+  margin-right: -30px;
+}
+
+.level h3{
+  margin-top: 0px;
+  cursor: pointer;
+}
+
+.sightread div {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.medium:hover {
+  background-color: yellow;
+  color: white;
+}
+
+.menu-panel{
+  margin-top: 40px;
+}
+
+.menu-panel h3{
+  border: 2px black solid;
+}
+
+#now {
+  color: red;
+  border-bottom: solid red 4px;
+  border-top: solid red 4px;
+  margin-top: -4px;
+}
+
+.play-button h2{
+  padding: 5px;
+  margin-top: 0px;
+  margin-left: 5px;
+  margin-right: -15px;
+}
+
+#selected {
+  border: lightblue 2px solid;
+}
+
+#shebang {
+  min-width: 900px;
+}
+
+#start {
+  background-color: lightgreen;
+  cursor: pointer;
+}
+
+#stop {
+  background-color: red;
+  cursor: pointer;
+}
+
+#times {
+  margin-right: 15px;
+}
+
+@font-face { font-family: Awesome; src: url('fontawesome-webfont.ttf'); }

@@ -1,0 +1,72 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation | Welcome</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+    <div id="shebang">
+      <div class="row headline">
+        <div class="small-8 small-centered column">
+          <h1>Sightread This!</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-8 small-centered column">
+          <div class="row sightread">
+            <div class="small-2 column" id="prev2"><img src="img/note_0.jpg"></div>
+            <div class="small-2 column" id="prev"><img src="img/note_0.jpg"></div>
+            <div class="small-2 column" id="now"><img src="img/note_0.jpg"></div>
+            <div class="small-2 column" id="next"><img src="img/note_0.jpg"></div>
+            <div class="small-2 column" id="next2"><img src="img/note_0.jpg"></div>
+            <div class="small-2 column" id="next3"><img src="img/note_0.jpg"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row menu-panel">
+        <div class="small-8 small-centered column">
+          <div class="row">
+            <div class="small-4 column counter">
+              <div class="row">
+                <div class="small-6 column arrows">
+                  <p><i class="fa fa-arrow-up fa-2x"></i></p>
+                  <p><i class="fa fa-arrow-down fa-2x"></i></p>
+                </div>
+                <div class="small-6 column">
+                  <h3 id="times">50</h3>
+                </div>
+              </div>
+            </div>
+            <div class="small-4 column level">
+              <h3 class="easy">EASY</h3>
+              <h3 class="medium">MEDIUM</h3>
+              <h3 id="selected" class="hard">HARD</h3>
+            </div>
+            <div class="small-4 column play-button">
+              <h2 id="start">START</h2>
+              <h2 id="stop">STOP</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/interface.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
