@@ -1,22 +1,6 @@
 
-$.preload( 'img/note_0.jpg',
-           'img/note_C0.jpg',
-           'img/note_D0.jpg',
-           'img/note_E0.jpg',
-           'img/note_F0.jpg',
-           'img/note_G0.jpg',
-           'img/note_A.jpg',
-           'img/note_B.jpg',
-           'img/note_C.jpg',
-           'img/note_D.jpg',
-           'img/note_E.jpg',
-           'img/note_F.jpg',
-           'img/note_G.jpg',
-           'img/note_A2.jpg',
-           'img/note_B2.jpg',
-           'img/note_C2.jpg'
-      );
 
+/*
 var blank = "<img src='img/note_0.jpg'>";
 var realC0 = "<img src='img/note_C0.jpg'>";
 var realD0 = "<img src='img/note_D0.jpg'>";
@@ -37,6 +21,8 @@ var realC2 = "<img src='img/note_C2.jpg'>";
 
 
 var realNotes = [realA, realB, realC, realD, realE, realF, realG, realA2, realB2, realC2, realC0, realD0, realE0, realF0, realG0];
+
+*/
 
 var myVar;
 
@@ -76,7 +62,8 @@ function startSightread (amount, speed) {
 
   myVar = setInterval(function(){
 
-    var randomNumber = Math.floor(Math.random() * 16);
+    //turn cMajor.twoOctave into a variable
+    var randomNumber = Math.floor(Math.random() * cMajor.twoOctave.length);
 
     var $next3 = $("#next3");
     var $next2 = $("#next2");
@@ -95,7 +82,8 @@ function startSightread (amount, speed) {
     $now.html($next.html());
     $next.html($next2.html());
     $next2.html($next3.html());
-    $next3.html(realNotes[randomNumber]);
+    //be able to use cMajor.twoOctave as a variable
+    $next3.html(cMajor.twoOctave[randomNumber]);
 
     readLength -= 1;
 
