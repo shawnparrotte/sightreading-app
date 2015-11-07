@@ -1,37 +1,20 @@
-
-
 /*
-var blank = "<img src='img/note_0.jpg'>";
-var realC0 = "<img src='img/note_C0.jpg'>";
-var realD0 = "<img src='img/note_D0.jpg'>";
-var realE0 = "<img src='img/note_E0.jpg'>";
-var realF0 = "<img src='img/note_F0.jpg'>";
-var realG0 = "<img src='img/note_G0.jpg'>";
-var realA = "<img src='img/note_A.jpg'>";
-var realB = "<img src='img/note_B.jpg'>";
-var realC = "<img src='img/note_C.jpg'>";
-var realD = "<img src='img/note_D.jpg'>";
-var realE = "<img src='img/note_E.jpg'>";
-var realF = "<img src='img/note_F.jpg'>";
-var realG = "<img src='img/note_G.jpg'>";
-var realA2 = "<img src='img/note_A2.jpg'>";
-var realB2 = "<img src='img/note_B2.jpg'>";
-var realC2 = "<img src='img/note_C2.jpg'>";
-
-
-
-var realNotes = [realA, realB, realC, realD, realE, realF, realG, realA2, realB2, realC2, realC0, realD0, realE0, realF0, realG0];
-
+  Renders Notes on Staff
 */
 
+//declare myVar in global scope to stop both functions
 var myVar;
 
+//stop note stream function
 function clearNotes(){
 
+//how many blank staves to clear the page
 var clearLength = 3;
 
+  //set interval
   myVar = setInterval(function(){
 
+    //assign variables to locations
     var $next3 = $("#next3");
     var $next2 = $("#next2");
     var $next = $("#next");
@@ -39,6 +22,7 @@ var clearLength = 3;
     var $prev = $("#prev");
     var $prev2 = $("#prev2");
 
+    //shift notes to the left
     $prev2.html($prev.html());
     $prev.html($now.html());
     $now.html($next.html());
@@ -46,25 +30,69 @@ var clearLength = 3;
     $next2.html($next3.html());
     $next3.html(blank);
 
+    //step down one
     clearLength -= 1;
 
+    //stop when counter = 0
     if (clearLength === 0){
       clearInterval(myVar)
-      speed = 0;
+      speed = (60000/$('#bpm').text());
     }
-
   }, speed);
 }
 
-function startSightread (amount, speed) {
+//starting note variable
+var currentNote = 3;
 
-  var readLength = amount;
+//note stream function [amount and speed defined in interface.js]
+function startSightread (speed) {
 
+  //set interval
   myVar = setInterval(function(){
 
-    //turn cMajor.twoOctave into a variable
-    var randomNumber = Math.floor(Math.random() * cMajor.twoOctave.length);
+    //random selection of the array [thisisthekey defined in interface.js]
+    var $selected = $("#selected");
 
+    //bucket to place selected notes
+    var noteBucket = [];
+
+    //push notes to bucket based on difficulty
+    if ($selected.text() === "EASY") {
+      if (currentNote == 0) {
+        noteBucket.push(currentNote + 1)
+      } else if(currentNote == thisisthekey[key].length - 1){
+        noteBucket.push(currentNote - 1)
+      } else {
+        noteBucket.push(currentNote - 1, currentNote + 1)
+      }
+    } else if($selected.text() === "MEDIUM"){
+      if (currentNote <= 0) {
+        noteBucket.push(currentNote + 1, currentNote + 2)
+      } else if(currentNote >= thisisthekey[key].length - 1){
+        noteBucket.push(currentNote - 1, currentNote - 2)
+      } else {
+        noteBucket.push(currentNote - 1, currentNote - 2, currentNote + 1, currentNote + 2)
+      }
+    } else if($selected.text() === "HARD"){
+      if (currentNote <= 0) {
+        noteBucket.push(currentNote + 1, currentNote + 2, currentNote + 3)
+      } else if(currentNote >= thisisthekey[key].length - 2){
+        noteBucket.push(currentNote - 1, currentNote - 2, currentNote - 3)
+      } else {
+        noteBucket.push(currentNote - 1, currentNote - 2, currentNote - 3, currentNote + 1, currentNote + 2, currentNote + 3)
+      }
+    }
+
+    //get a random index number from the length of the bucket array
+    var randomBucket = Math.floor(Math.random() * noteBucket.length);
+
+    //draw a number from the bucket
+    currentNote = Math.abs(noteBucket[randomBucket]);
+
+    //log the number (array number of currentKey)
+    console.log(currentNote);
+
+    //assign variables to locations
     var $next3 = $("#next3");
     var $next2 = $("#next2");
     var $next = $("#next");
@@ -72,20 +100,13 @@ function startSightread (amount, speed) {
     var $prev = $("#prev");
     var $prev2 = $("#prev2");
 
-    if (readLength === 1){
-      clearInterval(myVar);
-      clearNotes();
-    }
-
+    //move notes along the staff [thisisthekey defined in interface.js]
     $prev2.html($prev.html());
     $prev.html($now.html());
     $now.html($next.html());
     $next.html($next2.html());
     $next2.html($next3.html());
-    //be able to use cMajor.twoOctave as a variable
-    $next3.html(cMajor.twoOctave[randomNumber]);
-
-    readLength -= 1;
+    $next3.html(thisisthekey[key][currentNote]);
 
   }, speed);
 }

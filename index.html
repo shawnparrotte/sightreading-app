@@ -11,12 +11,16 @@
   </head>
   <body>
     <div id="shebang">
+
+      <!--h1 headline start-->
       <div class="row headline">
         <div class="small-8 small-centered column">
           <h1>Sightread This!</h1>
         </div>
       </div>
+      <!--stop-->
 
+      <!--staff start-->
       <div class="row">
         <div class="small-8 small-centered column">
           <div class="row sightread">
@@ -29,10 +33,14 @@
           </div>
         </div>
       </div>
+      <!--stop-->
 
+      <!--menu start-->
       <div class="row menu-panel">
         <div class="small-8 small-centered column">
           <div class="row">
+
+            <!--arrows and amounts of notes start-->
             <div class="small-4 column counter">
               <div class="row">
                 <div class="small-6 column arrows">
@@ -40,22 +48,94 @@
                   <p><i class="fa fa-arrow-down fa-2x"></i></p>
                 </div>
                 <div class="small-6 column">
-                  <h3 id="times">50</h3>
+                  <h3 id="bpm">50</h3>
                 </div>
               </div>
             </div>
+            <!--stop-->
+
+            <!--difficulty selector start-->
             <div class="small-4 column level">
               <h3 class="easy">EASY</h3>
               <h3 class="medium">MEDIUM</h3>
               <h3 id="selected" class="hard">HARD</h3>
             </div>
+            <!--stop-->
+
+            <!--play and stop button start-->
             <div class="small-4 column play-button">
               <h2 id="start">START</h2>
               <h2 id="stop">STOP</h2>
             </div>
+            <!--stop-->
+
           </div>
         </div>
       </div>
+      <!--stop-->
+
+      <!--key selector start-->
+        <div class="row key-select">
+          <div class="small-8 small-centered column">
+            <h2>Choose A Key</h2>
+            <form class="custom">
+              <div class="row" id="readingOptions">
+                <div class="small-4 columns">
+                  <label>
+                    Root
+                  </label>
+                    <select id="root">
+                      <option value="c">C</option>
+                      <option value="cs">C#</option>
+                      <option value="db">Db</option>
+                      <option value="d">D</option>
+                      <option value="ds">D#</option>
+                      <option value="eb">Eb</option>
+                      <option value="e">E</option>
+                      <option value="es">E#</option>
+                      <option value="f">Fb</option>
+                      <option value="f">F</option>
+                      <option value="fs">F#</option>
+                      <option value="gb">Gb</option>
+                      <option value="g">G</option>
+                      <option value="gs">G#</option>
+                      <option value="ab">Ab</option>
+                      <option value="a">A</option>
+                      <option value="as">A#</option>
+                      <option value="bb">Bb</option>
+                      <option value="b">B</option>
+                      <option value="bs">B#</option>
+                    </select>
+                </div>
+                <div class="small-4 columns">
+                  <label>
+                    Scale
+                  </label>
+                    <select id="scale">
+                      <option value="Major">Major</option>
+                      <!--<option value="Dorian">Dorian</option>
+                      <option value="Phrygian">Phrygian</option>
+                      <option value="Lydian">Lydian</option>
+                      <option value="Mixolydian">Mixolydian</option>-->
+                      <option value="Minor">Minor</option>
+                      <!--<option value="Locrian">Locrian</option>-->
+                    </select>
+                </div>
+                <div class="small-4 columns">
+                  <label>
+                   Octaves
+                    </label>
+                    <select id="octave">
+                      <option value="oneOctave">One Octave</option>
+                      <option value="twoOctave">Two Octaves</option>
+                    </select>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      <!--stop-->
+
     </div>
 
 
