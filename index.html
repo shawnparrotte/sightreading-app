@@ -91,8 +91,6 @@
                       <option value="ds">D#</option>
                       <option value="eb">Eb</option>
                       <option value="e">E</option>
-                      <option value="es">E#</option>
-                      <option value="f">Fb</option>
                       <option value="f">F</option>
                       <option value="fs">F#</option>
                       <option value="gb">Gb</option>
@@ -103,7 +101,7 @@
                       <option value="as">A#</option>
                       <option value="bb">Bb</option>
                       <option value="b">B</option>
-                      <option value="bs">B#</option>
+                      <option value="cb">Cb</option>
                     </select>
                 </div>
                 <div class="small-4 columns">
@@ -112,12 +110,16 @@
                   </label>
                     <select id="scale">
                       <option value="Major">Major</option>
-                      <!--<option value="Dorian">Dorian</option>
+                      <!--
+                      <option value="Dorian">Dorian</option>
                       <option value="Phrygian">Phrygian</option>
                       <option value="Lydian">Lydian</option>
-                      <option value="Mixolydian">Mixolydian</option>-->
+                      <option value="Mixolydian">Mixolydian</option>
+                      -->
                       <option value="Minor">Minor</option>
-                      <!--<option value="Locrian">Locrian</option>-->
+                      <!--
+                      <option value="Locrian">Locrian</option>
+                      -->
                     </select>
                 </div>
                 <div class="small-4 columns">
@@ -135,7 +137,15 @@
         </div>
       <!--stop-->
 
+      <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        <h2 id="modalTitle">Try a Different Key!</h2>
+        <p class="lead">That one is... a little wierd.</p>
+        <p>To avoid double sharps or double flats, choose the enharmonic key!</p>
+        <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+      </div>
+
     </div>
+    <!--hammer time!-->
 
 
 

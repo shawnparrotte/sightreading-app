@@ -112,6 +112,15 @@ h4 {
 .menu-panel h3{
 }
 
+#myModal h2 {
+  padding-bottom: 15px;
+}
+
+#myModal p {
+  font-family: "Oxygen";
+  text-align: center;
+}
+
 #now {
   color: red;
   border-bottom: solid #C14424 3px;

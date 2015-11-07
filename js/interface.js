@@ -43,19 +43,35 @@ $(".level").children().on("click", function(){
 */
 
 $("#start").click(function(){
+
+  getCurrentKey();
+
   if(canGo === true){
-  console.log(speed);
-  startSightread(speed);
+
+    if(key == "dbMinoroneOctave" || key == "dsMajoroneOctave" ||
+       key == "gsMajoroneOctave" || key == "asMajoroneOctave" ||
+       key == "dbMinortwoOctave" || key == "dsMajortwoOctave" ||
+       key == "gsMajoroneOctave" || key == "asMajoroneOctave" ||
+       key == "cbMinoroneOctave" || key == "cbMinortwoOctave" ){
+      $('#myModal').foundation('reveal', 'open');
+    } else {
+        console.log(speed);
+        startSightread(speed);
+    }
+
   } else {
-  console.log("please stop before starting again!")
-}
+      console.log("please stop before starting again!")
+  }
+
 });
 
 $("#stop").click(function(){
+
   if(canGo === false){
   clearInterval(myVar);
   clearNotes();
-  } 
+  }
+
 });
 
 /*
@@ -69,10 +85,10 @@ var currentOctave;
 //key on load
 var key = "cMajoroneOctave"
 
-//when select options change assign new key variable
-$('#readingOptions').change(function(){
+function getCurrentKey(){
   currentKey = $('#root').val();
   currentScale = $('#scale').val();
   currentOctave = $('#octave').val();
   key = currentKey + currentScale + currentOctave;
-});
+  return key
+}

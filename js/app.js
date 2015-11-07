@@ -46,7 +46,7 @@ var clearLength = 3;
 //starting note variable
 var currentNote = 3;
 
-//note stream function [amount and speed defined in interface.js]
+//note stream function [speed defined in interface.js]
 function startSightread (speed) {
 
   canGo = false;
@@ -54,7 +54,7 @@ function startSightread (speed) {
   //set interval
   myVar = setInterval(function(){
 
-    //random selection of the array [thisisthekey defined in interface.js]
+    //reads selected difficulty
     var $selected = $("#selected");
 
     //bucket to place selected notes
