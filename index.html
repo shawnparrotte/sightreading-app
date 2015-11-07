@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation | Welcome</title>
+    <title>Sightread This!</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/app.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:300' rel='stylesheet' type='text/css'>
     <script src="js/vendor/modernizr.js"></script>
   </head>
   <body>
@@ -43,12 +44,10 @@
             <!--arrows and amounts of notes start-->
             <div class="small-4 column counter">
               <div class="row">
-                <div class="small-6 column arrows">
-                  <p><i class="fa fa-arrow-up fa-2x"></i></p>
-                  <p><i class="fa fa-arrow-down fa-2x"></i></p>
-                </div>
-                <div class="small-6 column">
+                <div class="small-10 small-centered column arrows">
+                  <h3 id="bpm-head">BPM</h3>
                   <h3 id="bpm">50</h3>
+                  <p><i class="fa fa-arrow-down fa-2x"></i><i class="fa fa-arrow-up fa-2x"></i></p>
                 </div>
               </div>
             </div>
@@ -56,9 +55,9 @@
 
             <!--difficulty selector start-->
             <div class="small-4 column level">
-              <h3 class="easy">EASY</h3>
-              <h3 class="medium">MEDIUM</h3>
-              <h3 id="selected" class="hard">HARD</h3>
+              <h3 id="selected" class="easy" data-color="#81B5A6" style="background-color: rgb(129, 181, 166);">EASY</h3>
+              <h3 class="medium" data-color="#e9bc41">MEDIUM</h3>
+              <h3 class="hard" data-color="#C14424">HARD</h3>
             </div>
             <!--stop-->
 
@@ -77,7 +76,7 @@
       <!--key selector start-->
         <div class="row key-select">
           <div class="small-8 small-centered column">
-            <h2>Choose A Key</h2>
+            <h2>Select Key</h2>
             <form class="custom">
               <div class="row" id="readingOptions">
                 <div class="small-4 columns">

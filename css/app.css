@@ -1,51 +1,86 @@
 
 .arrows {
-  margin-top: 20px;
+ margin-left: 0;
 }
 
 .arrows i {
-  margin-left: 30px;
+  margin-left: 10px;
   cursor: pointer;
 }
 
+.arrows p {
+  margin-bottom: 5px;
+  margin-left: 30px;
+}
+
+#bpm {
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+#bpm-head {
+  margin-bottom: 0;
+  margin-top: 8px;
+}
 
 .counter {
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 .counter h3 {
-  margin-top: 46px;
 }
 
 .easy:hover{
-  background-color: lightgreen;
+  background-color: #81B5A6;
   color: white;
 }
 
 h1 {
-  font-family: Arial;
+  font-family: 'Oxygen';
 }
 
 h2 {
   text-align: center;
-  font-family: Arial;
+  font-family: 'Oxygen';
 }
 
 h3 {
   font-size: 25px;
   text-align: center;
-  font-family: Arial;
+  font-family: 'Oxygen';
+}
+
+h4 {
+  margin-top: 0;
+  border: 1px black solid;
+  text-align: center;
 }
 
 .hard:hover{
-  background-color: red;
+  background-color: #C14424;
   color: white;
 }
 
 .headline {
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 80px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.fa {
+  margin-bottom: 0;
+}
+
+.key-select {
+  margin-top: 30px;
+}
+
+.key-select h2 {
+  margin-bottom: 20px;
+}
+
+.key-select label {
+  font-family: "Oxygen";
 }
 
 .level {
@@ -55,6 +90,7 @@ h3 {
 .level h3{
   margin-top: 0px;
   cursor: pointer;
+  border: 1px solid black;
 }
 
 .sightread div {
@@ -65,7 +101,7 @@ h3 {
 }
 
 .medium:hover {
-  background-color: yellow;
+  background-color: #e9bc41;
   color: white;
 }
 
@@ -74,14 +110,13 @@ h3 {
 }
 
 .menu-panel h3{
-  border: 2px black solid;
 }
 
 #now {
   color: red;
-  border-bottom: solid red 4px;
-  border-top: solid red 4px;
-  margin-top: -4px;
+  border-bottom: solid #C14424 3px;
+  border-top: solid #C14424 3px;
+  margin-top: -3px;
 }
 
 .play-button h2{
@@ -91,22 +126,28 @@ h3 {
   margin-right: -15px;
 }
 
-#selected {
-  border: lightblue 2px solid;
-}
-
 #shebang {
   min-width: 900px;
 }
 
 #start {
-  background-color: lightgreen;
+  background-color: #81B5A6;
   cursor: pointer;
+  margin-bottom: 5px;
+}
+
+#start:hover{
+  background-color: #91C5B6;
+  margin-bottom: 5px;
 }
 
 #stop {
-  background-color: red;
+  background-color: #C14424;
   cursor: pointer;
+}
+
+#stop:hover{
+  background-color: #D15434;
 }
 
 #times {
