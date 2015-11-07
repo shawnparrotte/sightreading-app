@@ -21,10 +21,8 @@ var clearLength = 3;
     var $next = $("#next");
     var $now = $("#now");
     var $prev = $("#prev");
-    var $prev2 = $("#prev2");
 
     //shift notes to the left
-    $prev2.html($prev.html());
     $prev.html($now.html());
     $now.html($next.html());
     $next.html($next2.html());
@@ -102,10 +100,8 @@ function startSightread (speed) {
     var $next = $("#next");
     var $now = $("#now");
     var $prev = $("#prev");
-    var $prev2 = $("#prev2");
 
     //move notes along the staff [thisisthekey defined in interface.js]
-    $prev2.html($prev.html());
     $prev.html($now.html());
     $now.html($next.html());
     $next.html($next2.html());

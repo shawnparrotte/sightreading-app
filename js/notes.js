@@ -13,7 +13,7 @@ $.preload( 'notes/note_0.jpg','notes/A0.jpg','notes/A1.jpg','notes/As0.jpg',
            'notes/Fs0.jpg','notes/Fs1.jpg','notes/Fs-1.jpg','notes/F-1.jpg',
            'notes/Fb0.jpg','notes/Fb1.jpg','notes/Fb-1.jpg','notes/G0.jpg',
            'notes/G1.jpg','notes/Gs0.jpg','notes/Gs1.jpg','notes/Gs-1.jpg',
-           'notes/G-1.jpg','notes/Gb0.jpg','notes/Gb1.jpg','notes/Gb-1.jpg'
+           'notes/G-1.jpg','notes/Gb0.jpg','notes/Gb1.jpg','notes/Gb-1.jpg', 'notes/treble.jpg'
       );
 
 var blank = "<img src='notes/note_0.jpg'>",e_1 = "<img src='notes/E-1.jpg'>",es_1 = "<img src='notes/Es-1.jpg'>",
