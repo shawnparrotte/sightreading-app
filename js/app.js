@@ -4,6 +4,7 @@
 
 //declare myVar in global scope to stop both functions
 var myVar;
+var canGo = true;
 
 //stop note stream function
 function clearNotes(){
@@ -37,6 +38,7 @@ var clearLength = 3;
     if (clearLength === 0){
       clearInterval(myVar)
       speed = (60000/$('#bpm').text());
+      canGo = true;
     }
   }, speed);
 }
@@ -46,6 +48,8 @@ var currentNote = 3;
 
 //note stream function [amount and speed defined in interface.js]
 function startSightread (speed) {
+
+  canGo = false;
 
   //set interval
   myVar = setInterval(function(){

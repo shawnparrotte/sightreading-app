@@ -43,13 +43,19 @@ $(".level").children().on("click", function(){
 */
 
 $("#start").click(function(){
+  if(canGo === true){
   console.log(speed);
   startSightread(speed);
+  } else {
+  console.log("please stop before starting again!")
+}
 });
 
 $("#stop").click(function(){
+  if(canGo === false){
   clearInterval(myVar);
   clearNotes();
+  } 
 });
 
 /*
